@@ -1,17 +1,20 @@
 # Outer Rim Run
 
-A compact, original d20-inspired Windows console adventure starring Sabrina, a human smuggler caught between Imperial security and a Rebel relief operation. This is a fan-made, unofficial project and is not affiliated with or endorsed by Lucasfilm or Disney.
+An original d20-inspired smuggler adventure starring Sabrina, a human caught between Imperial security and a Rebel relief operation. This fan-made project is unofficial and is not affiliated with or endorsed by Lucasfilm or Disney.
 
-## Run
+## Play the pixel game
 
-On Windows, launch `OuterRimRun.exe`. The executable targets the .NET Framework 4.x already included with Windows. Use the numbered actions, type `sheet` to review Sabrina, and `quit` to pause.
+On Windows, launch `OuterRimPixel.exe`. Click an action or press **1–5**. Press **S** to see Sabrina's sheet. The graphical build uses pixel-art scenes, animated rain, dice checks, and a branching story. Press **R** after an ending to restart.
 
-## Build from source
+The console build, `OuterRimRun.exe`, is also included.
 
-Open a Developer Command Prompt for Visual Studio (or any shell with the .NET Framework C# compiler) and run:
+## Build
+
+With the .NET Framework C# compiler installed:
 
 ```bat
-csc /nologo /target:exe /out:OuterRimRun.exe OuterRimRun.cs
+csc /nologo /target:winexe /optimize+ /r:System.Windows.Forms.dll /r:System.Drawing.dll /out:OuterRimPixel.exe OuterRimPixel.cs
+csc /nologo /target:exe /optimize+ /out:OuterRimRun.exe OuterRimRun.cs
 ```
 
-The game tracks health, credits, time, Imperial heat, dice results, and campaign clues for the current session. It is a small story prototype, not a full implementation of a published Star Wars RPG ruleset.
+The games track health, credits, time, Imperial heat, dice results, and campaign clues. These are compact story prototypes, not full implementations of a published Star Wars RPG ruleset.
